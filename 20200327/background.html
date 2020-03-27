@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG</title>
+    <style>
+        div{
+            width: 400px;
+            height: 300px;
+            background-color: khaki;
+            /* background: url(https://picsum.photos/90/90/?random=1); */
+        }
+        .demo1{
+            background-image: url(https://picsum.photos/90/90/?random=1);
+        }
+        .demo2{
+            background-image: url(https://picsum.photos/90/90/?random=1);
+            background-repeat: round;
+        }
+        .demo3{
+            background-image: url(https://picsum.photos/90/90/?random=1);
+            background-repeat: space;
+        }
+        .demo4{
+            background-image: url(https://picsum.photos/60/90/?random=1);
+            /* background-repeat: repeat-x; */
+            background-repeat: round space;
+        }
+        .demo5{
+            background-image: url(https://picsum.photos/60/90/?random=1);
+            background-repeat: no-repeat;
+            /* background-position: right bottom; */
+            /* background-position-x: right; */
+            /* background-position-y: bottom; */
+            /* background-position: 50% 50%; */
+            /* background-position: calc(100% + 30px) 50%; calc微內建計算器 */
+
+            background-position: 50% 50%;
+            /* background-size: 120px 120px; */
+            /* background-size: cover;----等比例放大裁切 */
+            /* background-size: contain;---等比例放大不裁切，直到邊境 */
+            background-size: contain;
+
+
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+    <div stly="width:400px; height:300px"></div>
+    <!-- <img src="https://fakeimg.pl/300x300/#000"> -->
+    <!-- <img src="https://picsum.photos/120/120/?random=1"> -->
+    <hr>
+    <div class="demo1"></div>
+    <hr>
+    <div class="demo2"></div>
+    <hr>
+    <div class="demo3"></div>
+    <hr>
+    <div class="demo4"></div>
+    <hr>
+    <div class="demo5"></div>
+</body>
+</html>
