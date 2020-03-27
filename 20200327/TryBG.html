@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        table{
+            margin: 1rem;
+            display: inline-table;
+        }
+        table,tr,td{
+            border: 1px solid#000;
+        }
+        td{
+            width: 200px;
+            height: 200px;
+        }
+        .demo0{
+            background:red;
+        }
+        .demo1{
+            background: url("https://picsum.photos/50/50/?random=1");
+            background-size: cover;
+        }
+        .demo2{
+            background: url("https://picsum.photos/50/50/?random=1");
+            background-size: 50px,50px;
+            background-repeat: repeat-x;
+        }
+        .demo3{
+            background: url("https://picsum.photos/50/50/?random=1");
+            background-size: 50px,50px;
+            background-repeat: repeat-y;
+        }
+        .demo4{
+            background: url("https://picsum.photos/50/50/?random=1")no-repeat ;
+            background-size: 50px,50px;
+            background-position: 50% 50%;
+        }
+        .demo5{
+            background: url("https://picsum.photos/50/50/?random=1")no-repeat ;
+            background-size: 50px,50px;
+            background-position: 50% 50%;
+            background-color: khaki;
+        }
+        .demo6{
+            background: url("https://picsum.photos/50/50/?random=3")no-repeat center center,
+                        url("https://picsum.photos/50/50/?random=2")no-repeat center top,
+                        url("https://picsum.photos/50/50/?random=2")no-repeat bottom;
+        }
+        .demo7{
+            background: linear-gradient(90deg,black,blue);
+
+        }
+        .demo8{
+            background-image: radial-gradient(circle,black 0%,white);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="demo0"></td>
+            <td class="demo1"></td>
+            <td class="demo2"></td>
+        </tr>
+        <tr>
+            <td class="demo3"></td>
+            <td class="demo4"></td>
+            <td class="demo5"></td>
+        </tr>
+        <tr>
+            <td class="demo6"></td>
+            <td class="demo7"></td>
+            <td class="demo8"></td>
+        </tr>
+    </table>
+</body>
+</html>
