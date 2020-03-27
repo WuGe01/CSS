@@ -33,27 +33,31 @@
             color: purple;
         }
         p{
-            line-height:1.5rem;
+            line-height: 1.5;
+            text-indent: 2rem;
         }
-        p:first-letter{
-            font-size: 2em;
+        p::first-letter{
+            font-size: 2rem;
             font-weight:bold;
-
         }
-
         strong{
             color: red;
+        }
+        .center{
+            text-align: center;
+        }
+        .tb-table{
+            text-align: center;
         }
         table{
             width: auto;
             text-align: center;
-            vertical-align: middle;
-            line-height: 2rem;
-            display: inline-flex;
+            display: inline-table;
+            border-collapse: collapse
         }
         td{
             width: 10rem;
-            height: 4rem;
+            height: 3rem;
         } 
 
     </style>
@@ -115,8 +119,9 @@
     <p>Bootstrap 是一組用於網站和網路應用程式開發的開源前端（所謂「前端」，指的是展現給終端使用者的介面。與之對應的「後端」是在伺服器上面執行的程式碼）框架，包括 HTML、CSS及JavaScript 的框架，提供字體排印、表單、按鈕、導航及其他各種元件及 Javascript 擴充套件，旨在使動態網頁和 Web 應用的開發更加容易。</p>
     <a href="#"><b>回頂端</b></a>
 <hr> 
-<h2>座位表</h2>    
-<table border="1" width="100%" cellpadding="1"     style="border-collapse: collapse">
+<h2 class="center">座位表</h2>    
+<div class="tb-table">
+<table border="1" width="100%" cellpadding="1">
 
 <tbody>
     <tr>
@@ -162,7 +167,7 @@
     </tr> 
     <tr>
         <td colspan="4">
-            <table border="1" style="border-collapse: collapse">
+            <table border="1">
                 <tr>
                     <td>老師的位置</td>
                 </tr>
@@ -171,5 +176,6 @@
     </tr>
 </tbody>
 </table>
+</div>
 </body>
 </html>
