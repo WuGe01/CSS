@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS選擇器</title>
+     <style>
+         *{
+             background-color: khaki;
+         }
+         h1{
+             color:red;
+         }
+        .clrpink{
+            color: royalblue;
+         }
+        .big{
+            font-size: 50px;
+        }
+        .small{
+            font-size: 20px;
+        }
+        #brown{
+            color: slateblue;
+        }
+        .big, #brown{
+            background-color: red;
+        }
+        /* div p{
+            color: aqua;
+        } */
+        /* div>p{
+            color: gold;
+        } */
+        /* []的子孫[]符合 */
+        div .goldp{
+            color: gray;
+        }
+        div .goldp>p{
+            color: green;
+        }
+     </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <h1 class="clrpink">Lorem ipsum dolor sit amet.</h1>
+    <h1 class="clrpink big">Lorem ipsum dolor sit amet.</h1>
+    <h1 class="clrpink small">Lorem ipsum dolor sit amet.</h1>
+    <h1 id="brown"> Lorem ipsum dolor sit amet.</h1>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div class="goldp">
+            <p>Lorem ipsum dolor sit amet.</p>
+            <div>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

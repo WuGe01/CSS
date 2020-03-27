@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select 偽類別</title>
+    <style>
+        /* 如果要對a特別設定偽類別，建議順序為lvha */
+        a {
+            text-decoration: none;
+        }
+        a:link {
+            color: red;
+        }
+        a:visited {
+            color: green;
+        }
+        a:hover {
+            color: blue;
+        }
+        a:active {
+            color: purple;
+        }
+        h1:not(.odd){
+            color: green;
+        }
+        body :not(a){
+            font-size: 40px;
+        }
+        table{
+            width: 100%;
+        }
+        tr:nth-last-of-type(odd){
+            background: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="http://www.google.com">Google</a>
+    <a href="http://www.kimo.com">Yahoo</a>
+    <a href="http://www.momo.com">MoMo購物網</a>
+    <a href="http://www.mobile01.com">Mobile01</a>
+    <a href="http://www.msn.com">MSN</a>
+    <br>
+    <h1 class="odd">Lorem ipsum dolor sit amet.</h1>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <h1 class="odd">Lorem ipsum dolor sit amet.</h1>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <h1 class="odd">Lorem ipsum dolor sit amet.</h1>
+    <table>
+        <tr>
+            <td>001</td>
+        </tr>
+        <tr>
+            <td>002</td>
+        </tr>
+        <tr>
+            <td>003</td>
+        </tr>
+        <tr>
+            <td>004</td>
+        </tr>
+        <tr>
+            <td>005</td>
+        </tr>
+        <tr>
+            <td>006</td>
+        </tr>
+    </table>
+</body>
+
+</html>

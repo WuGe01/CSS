@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>偽元素</title>
+    <style>
+        div.demo{
+            background: green;
+            width: 150px;
+            height: 150px;
+        }
+        div.demo::before{
+            content: "WOW!!";
+            background: red;
+        }
+        div.demo::after{
+            content: "YAAAAAAAAAAAA";
+            background: blue;
+            transform: rotate(45deg);
+        }
+        div.demo::after, div.demo::before{
+            display: block;
+            width: 50px;
+            height: 50px;
+        }
+        div.r1{
+            background: hotpink;
+            width: 20px;
+            height: 20px;
+            transform:translateX(10px)translateY(-8px)rotate(45deg);
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="demo">Lorem ipsum dolor sit amet.</div>
+    <span>Lorem ipsum dolor sit amet.</span>
+    <hr>
+    <div style="background:chartreuse;width: 150px;height: 150px;">
+        <div style="background:red; width: 50px;height: 50px;">WOW!! </div>
+        Lorem ipsum dolor sit amet.
+        <div style="background:blue; width: 50px;height: 50px;">YAAAAAAAAAAAA </div>
+    </div>
+    <hr>
+    <div style="background: hotpink;width: 150px;height: 80px;"><div class="r1"></div> 
+    </div>
+
+</body>
+</html>
