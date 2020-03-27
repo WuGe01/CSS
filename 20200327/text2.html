@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Break</title>
+    <style>
+        p.demo1{
+            word-break: normal;
+        }
+        p.demo2{
+            word-break: keep-all;
+            /* 保留單字不切斷，除- */
+        }
+        p.demo3{
+            word-break: break-all;
+            /* 不論如何都切斷 */
+        }
+        p.demo4{
+            word-break: break-word;
+            /* 前兩者的綜合，除非空間滿不然不切斷 */
+        }
+        p{
+            width: 7rem;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <P class="demo1">Lorem ipsum dolor, sit amet-consectetur adipisicing elit. Voluptates, laudantium!</P>
+    
+    <P class="demo2">Lorem ipsum dolor, sit amet-consectetur adipisicing elit. Voluptates, laudantium!</P>
+    
+    <P class="demo3">Lorem ipsum dolor, sit amet-consectetur adipisicing elit. Voluptates, laudantium!</P>
+    
+    <P class="demo4">Lorem ipsum dolor, sit amet-consectetur adipisicing elit. Voluptates, laudantium!</P>
+</body>
+</html>
