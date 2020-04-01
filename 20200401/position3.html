@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            /* height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            background-color: turquoise;
+            margin: 5px;
+            text-align: center;
+            line-height: 50px;
+            display: inline-block;
+            font-size: 1rem;
+        }
+        .bigbox{
+            width: 300px;
+            height: 240px;
+            background-color: #ccc;
+            border: 1px solid #000;
+            font-size: 0;
+            /* margin: calc(50vh - 121px) auto; */
+            position: relative;
+        }
+        .abs{
+            background-color: lightsalmon;
+            position: relative;
+            left: -99px;
+            z-index: 999;
+            /* 設定誰上誰下 數字大為上 */
+        }
+        .rel{
+            background-color: lightskyblue;
+            position: absolute;
+            left: 0;
+            top: 100PX;
+            z-index: 1009;
+        
+        }
+        .fix{
+            background-color: lightcoral;
+        }
+        .main{
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <!-- div.bigbox>div.box{$$}*20 -->
+    <div class="bigbox">
+        <div class="box">01</div>
+        <div class="box">02</div>
+        <div class="box">03</div>
+        <div class="box">04</div>
+        <div class="box rel">05</div>
+        <div class="box">06</div>
+        <div class="box">07</div>
+        <div class="box">08</div>
+        <div class="box">09</div>
+        <div class="box fix">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+        <div class="box">13</div>
+        <div class="box abs">14</div>
+        <div class="box">15</div>
+        <div class="box">16</div>
+        <div class="box">17</div>
+        <div class="box">18</div>
+        <div class="box">19</div>
+        <div class="box">20</div>
+    </div>
+    </div>
+</body>
+</html>
