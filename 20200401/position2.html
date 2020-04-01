@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+            font-size: 0;
+        }
+        .container{
+            background-color: greenyellow;
+            width: 100%;
+
+        }
+        .card{
+
+            font-size: 1rem;
+            border: 1px solid #000;
+            width: 30%;
+            display: inline-block;
+            margin: 30px calc(10% / 6 - 2px);
+            background-color: white;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .rel{
+            background-color: tomato;
+            color: white;
+            display: block;
+            width: 50px;
+            margin-left: auto;
+            text-align: center;
+            
+            position: relative;
+            left: 5px;
+            top: 5px; 
+        }
+        .abs{
+            background-color: blue;
+            color: white;
+            width: 50px;
+            position: absolute;
+            /* display: block; */
+            text-align: center;
+            left:0;
+            top: 0;
+
+        }
+        .fix{
+            background-color: green;
+            color: white;
+            width: 50px;
+            position: fixed;
+            text-align: center;
+            right: 10px;
+            bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <span class="rel">Hot</span>
+            <h1>Lorem</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, dicta molestiae corrupti incidunt voluptates saepe eligendi</p>
+        </div>
+        <div class="card" >
+            <span class="rel">Hot</span>
+            <h1>Lorem</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, dicta molestiae corrupti incidunt voluptates saepe eligendi</p>
+        </div>
+        <div class="card">
+            <span class="rel">Hot</span>
+            <h1>Lorem</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, dicta molestiae corrupti incidunt voluptates saepe eligendi</p>
+        </div>
+        <hr>
+    <div class="container">
+        <div class="card">
+            <span class="abs">new</span>
+            <h1>Lorem</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, dicta molestiae corrupti incidunt voluptates saepe eligendi</p>
+        </div>
+        <div class="card">
+            <span class="abs">new</span>
+            <h1>Lorem</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, dicta molestiae corrupti incidunt voluptates saepe eligendi</p>
+        </div>
+        <div class="card">
+            <span class="fix">new</span>
+            <h1>Lorem</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, dicta molestiae corrupti incidunt voluptates saepe eligendi</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
