@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex{
+            display: flex;
+            background: grey;
+            width: 270px;
+            height: 500px;
+        }
+        .item{
+            width: 100px;
+            margin: 10px;
+        }
+        .red{
+            background: lightpink;
+            flex-shrink: 0;
+            order: 2;
+        }
+        .green{
+            background: lightgreen;
+            flex-shrink: 1;
+            order: 1;
+        }
+        .blue{
+            background: lightskyblue;
+            flex-shrink: 2;
+            order:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <p class="item red">R</p>
+        <p class="item green">G</p>
+        <p class="item blue">B</p>
+    </div>
+</body>
+</html>
