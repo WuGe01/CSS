@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=di, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .container{
+            width: 960px;
+            background-color: lightcyan;
+            margin: auto;
+            overflow: auto;
+        }
+        .col{
+            border: 1px solid #000;
+            width: 300px;
+            margin: 10px;
+            background-color: lightgreen;
+            float: left;
+            padding: 50px;
+            /* border: 10px; */
+            box-sizing: border-box;
+        }
+        .clrbox{
+            width: 960px;
+            background-color: lightslategray;
+            height: 50px;
+            
+        }
+        .clear::after,.clear::before {
+            content: "";
+            display: block;
+            /* height: 180px; */
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container clear">
+        <div class="col">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem hic nostrum quasi, cumque libero, laboriosam eveniet nemo laborum voluptate dolor aut animi sed dolores similique placeat non consequuntur, fuga iusto quaerat vitae. Ipsam blanditiis autem adipisci praesentium maiores suscipit, aperiam possimus ipsum molestias esse eaque aut consequatur, voluptas sapiente recusandae.</div>
+        <div class="col">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem hic nostrum quasi, cumque libero, laboriosam eveniet nemo laborum voluptate dolor aut animi sed dolores similique placeat non consequuntur, fuga iusto quaerat vitae. Ipsam blanditiis autem adipisci praesentium maiores suscipit, aperiam possimus ipsum molestias esse eaque aut consequatur, voluptas sapiente recusandae.</div>
+        <div class="clear">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem hic nostrum quasi, cumque libero, laboriosam eveniet nemo laborum voluptate dolor aut animi sed dolores similique placeat non consequuntur, fuga iusto quaerat vitae. Ipsam blanditiis autem adipisci praesentium maiores suscipit, aperiam possimus ipsum molestias esse eaque aut consequatur, voluptas sapiente recusandae.</div>
+    </div>
+    <div class="clrbox">
+    </div>
+    <!-- <div style="both">
+        00000000000000000000000000000
+            </div> -->
+</body>
+</html>

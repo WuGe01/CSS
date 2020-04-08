@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{
+            text-align: center;
+            } */
+       
+        /* .container::before,container::after{
+            clear: both;
+        } */
+        .container{
+            width: 1024px;
+            height: 768px;
+            border: 1px solid grey;
+            margin: auto;
+            font-family: "微軟正黑體";
+            font-size: 40px;
+            color:white;                      
+        }
+        .container>div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .po1{
+            width: 1024px;
+            height: 100px;
+            background: #000;
+            overflow: hidden;       
+        }
+        .po2{
+            width: 200px;
+            height: 568px;
+            background: lightgray;
+            float: left;
+        }
+        .po3{
+            width: 824px;
+            height: 568px;    
+            background: gray;
+            float: left;
+        }
+        .po4{
+            width: 1024px;
+            height: 100px;
+            background: black;
+            overflow: hidden;       
+        }
+
+        
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="po1">Header</div>
+    <div class="po2">Left</div>
+    <div class="po3">Right</div>
+    <div class="po4">Footer</div>
+</div>
+</body>
+</html>
