@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轉場</title>
+    <style>
+        body{
+            margin: 0;
+            text-align: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background: darkseagreen;
+            line-height: 100px;
+            /* transform: translate(-50%,-50%); */
+            position: relative;
+            /* transition: all 0.5s ease-in 0s; */
+            /* 第一個為使用對象，第二個為時間，第三曲線，第四延遲秒數 */
+            /* transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in;
+            transition-delay: 0s; */
+            transition: background-color 0.5s ease-in 0s, 
+                        width 3s ease-in 0s;
+            }
+        .box:hover{
+            background: darkred;
+            width: 200PX;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Befult</div>
+</body>
+</html>
