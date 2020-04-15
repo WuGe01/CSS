@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            text-align: center;
+            flex-direction: column;
+            
+        }
+        .an1{
+            width: 100px;
+            height: 100px;
+            background-color: darkorange;
+            position: relative;
+
+
+            /* 動畫名稱公式*/
+            /* animation: demo1; */
+            /* 動畫時間 */
+            /* animation-duration: 1s;             */
+            /* 動畫速度 */
+            /* animation-timing-function: ease-in-out; */
+            /* 動畫延遲 */
+            /* animation-delay: 0.5s; */
+            /* 播放次數 */
+            /* animation-iteration-count: 3; */
+            /* 循環方式 */
+            /* animation-direction: alternate; */
+            /* 動畫停留方式*/
+            /* animation-fill-mode: forwards; */
+
+            animation: demo1 2s ease-in-out 2s infinite alternate;
+        }
+        /* demo1的影格 */
+        @keyframes demo1{
+            from{
+                background-color: darkred;
+                /* width: 50px;  */
+                left: -50px;
+                
+            }
+            to{
+                background-color: darkorange;
+                /* width: 200px; */
+                left: 50px;
+
+            }
+        }
+        .an2 {
+            width: 100px;
+            height: 50px;
+            background-color: darkred;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .an2::after{
+            content: "";
+            background: linear-gradient(
+                135deg, rgba(255, 255, 255, 0) 30%,rgba(255, 255, 255, 0.4) 50%,#ffffff00 70%
+            );
+            /* width: 500px; */
+            /* height: 500px; */
+            /* opacity: 0.3; */
+            position: absolute;
+            top:-100%;
+            left:-100%;
+            right: -100%;
+            bottom: -100%;
+            transform: translateX(-100%);
+            animation: demo2 1s linear infinite;
+        }
+        @keyframes demo2{
+            0%{
+                transform: translateX(-50%);
+            }
+            100%{
+                transform: translateX(50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="an1">HELLO WORLD</div>
+    <div class="an2">Button</div>
+</body>
+</html>

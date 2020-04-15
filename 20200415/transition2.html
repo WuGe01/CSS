@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轉場</title>
+    <style>
+        body{
+            margin: 0;
+            text-align: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background: darkseagreen;
+            line-height: 100px;
+            position: relative; 
+            transition: background-color 0.5s ease-in 0s, 
+                        width 3s ease-in 0s;
+            }
+        .box::after{
+            content: "SAWS";
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: darkred;
+            opacity: 1;
+            transform-origin: left top;
+            transition: 
+                opacity 1s ease 0s,
+                width 1s ease 1s,
+                background-color 1s ease 2s,
+                transform 1s ease 3s,
+                top 1s ease 4s;
+
+
+            }
+        .box:hover::after{
+            background: darkorange;
+            width: 200PX;
+            opacity: 1;
+            transform: rotate(90deg);
+            top: -100%;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Befult</div>
+</body>
+</html>

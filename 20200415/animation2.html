@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            text-align: center;
+            flex-direction: column;
+            background: black;
+            
+        }
+        .an1{
+            width: 100px;
+            height: 100px;
+            background-color: darkorange;
+            position: relative;
+
+            animation: demo1 2s ease-in-out 2s infinite alternate;
+        }
+      
+        @keyframes demo1{
+            from{
+                background-color: darkred;
+                left: -50px;   
+            }
+            to{
+                background-color: darkorange;
+                left: 50px;
+            }
+        }
+        .an2 {
+            width: 100px;
+            height: 50px;
+            background-color: darkred;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .an2::after{
+            content: "";
+            background: linear-gradient(
+                135deg, rgba(255, 255, 255, 0) 30%,rgba(255, 255, 255, 0.4) 50%,#ffffff00 70%
+            );
+            position: absolute;
+            top:-100%;
+            left:-100%;
+            right: -100%;
+            bottom: -100%;
+            transform: translateX(-100%);
+            animation: demo2 1s linear infinite;
+        }
+        @keyframes demo2{
+            0%{
+                transform: translateX(-50%);
+            }
+            100%{
+                transform: translateX(50%);
+            }
+        }
+        .an3{
+            position: relative;
+            /* width: 100px;
+            text-align: center; */
+        }
+        .an3::before,.an3::after{
+            content: "";
+            border:1px solid white;
+            position: absolute;
+            left: -5rem;
+            top: -0.5rem;
+            right: -5rem;
+            bottom: -0.5rem;
+            z-index: -1;
+        }
+        .an3::after{
+            animation: demo3 5s linear infinite forwards;
+        }
+        @keyframes demo3{
+            0%{
+                right: 200px;
+            }
+            25%,75%{
+                background: #500;
+            }
+            50%,100%{
+                background: red;
+            }
+            
+        }
+        .an4{
+            font-size: 3rem;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1rem;
+            border: 1px solid #FFF;
+            padding: 10px 0 10px 1rem;
+            animation: demo4_box 10s linear infinite,
+                        demo4_text 5s linear infinite  ;
+            overflow: hidden;
+            /* box-shadow: 0px 0px 1rem 5px red,
+                        inset 0px 0px 1rem 5px red,
+                        0px 0px 1rem 5px #FF000000; */
+        }
+         @keyframes demo4_text{
+            0%,100%{
+                text-shadow: 0px 0rem 3rem #FF0000FF,0 0 3rem #FF000099;
+            }
+            33%{
+                text-shadow: 0px 0rem 3rem #00FF00FF,0 0 3rem #00FF00FF;
+            }
+            66%{
+                text-shadow: 0px 0rem 3rem #0000FFFF,0 0 3rem #0000FFFF;
+        }
+            } 
+        @keyframes demo4_box{
+            0%{
+                box-shadow: 0px 0px 1rem 5px red,
+                        inset 0px 0px 1rem 5px red,
+                        0px 0px 1rem 15px #FF000000;
+            }
+            12.5%{
+                box-shadow: 0px 0px 1rem 5px orange,
+                        inset 0px 0px 1rem 5px orange,
+                        0px 0px 1rem 15px rgba(255, 166, 0, 0.5);
+            }
+            25%{
+                box-shadow: 0px 0px 1rem 5px yellow,
+                        inset 0px 0px 1rem 5px yellow,
+                        0px 0px 1rem 15px rgba(255, 255, 0, 0);
+
+            }
+            37.5%{
+                box-shadow: 0px 0px 1rem 5px green,
+                        inset 0px 0px 1rem 5px green,
+                        0px 0px 1rem 15px rgba(0, 128, 0, 0.5);
+            }
+            50%{
+                box-shadow: 0px 0px 1rem 5px #0F8,
+                        inset 0px 0px 1rem 5px #0F8,
+                        0px 0px 1rem 15px rgba(0, 255, 136, 0);
+            }
+            62.5%{
+                box-shadow: 0px 0px 1rem 5px skyblue,
+                        inset 0px 0px 1rem 5px skyblue,
+                        0px 0px 1rem 15px rgba(135, 207, 235, 0.5);
+            }
+            75%{
+                box-shadow: 0px 0px 1rem 5px blue,
+                        inset 0px 0px 1rem 5px blue,
+                        0px 0px 1rem 15px rgba(0, 0, 255, 0);
+            }
+            87.5%{
+                box-shadow: 0px 0px 1rem 5px purple,
+                        inset 0px 0px 1rem 5px purple,
+                        0px 0px 1rem 15px rgba(128, 0, 128, 0.5);
+            }
+            100%{
+                box-shadow: 0px 0px 1rem 5px red,
+                        inset 0px 0px 1rem 5px red,
+                        0px 0px 1rem 15px #FF000000;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="an1">HELLO WORLD</div>
+    <div class="an2">Button</div>
+    <div class="an3">Loading</div>
+    <div class="an4">Loki</div>
+</body>
+</html>
