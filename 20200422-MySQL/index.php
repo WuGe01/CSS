@@ -3,7 +3,7 @@
 $dsn="mysql:host=localhost;charset=utf8;dbname=student";
 $pdo=new PDO($dsn,'root','');
 
-$sql = "select * from students";
+$sql = "select * from students where left(class_num,3)='102'";
 /*
     PDO::FETCH_ASSOC
     PDO::FETCH_NUM
