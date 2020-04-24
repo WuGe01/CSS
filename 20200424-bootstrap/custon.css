@@ -1,0 +1,6 @@
+.row>*{
+    background: #CCC;
+    border: 2px solid #aaa;
+    margin-bottom: 5px;
+    min-height: 50px;
+}
