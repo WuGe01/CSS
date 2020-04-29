@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+    margin: auto;
+    font-family: '微軟正黑體',Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+table{
+    margin: auto;
+    border: 1px solid lightgray;
+    text-align: left;
+    font-family: '微軟正黑體',Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.tctc{
+    text-align: center;
+}
