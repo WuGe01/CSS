@@ -7,11 +7,24 @@
     <link rel="stylesheet" href="/plugins/bootstrap.css">
     <style>
         table{
-            
+            margin: auto;
         }
     </style>
 </head>
 <body>
+    <?php
+    if(isset($_GET['status'])){       
+              switch(($_GET['status'])){
+                case 'fasle':
+                    echo "帳號密碼錯誤";
+                break;
+                case 'true':
+                    header("location:list_user.php?id=". $_GET['id']);
+                break;
+
+            } ;    
+    };
+    ?>
     <form action="checkLogin.php" method="post">
         <table>
             <tr>
@@ -20,7 +33,7 @@
             </tr>
             <tr>
                 <td>密碼:</td>
-                <td><input type="text" name="pw" id="pw"></td>
+                <td><input type="password" name="pw" id="pw"></td>
             </tr>
             <tr>
             <td>
@@ -31,5 +44,6 @@
             </td>
             </tr>
         </table></form>
+        <a href="reg.php"><button>註冊</button></a>
 </body>
 </html>

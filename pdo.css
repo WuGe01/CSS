@@ -26,7 +26,7 @@ td:hover{
     background-color: rgb(19, 19, 19);
     color: #FFF;
 }
-h1>div{
+h1>div, h3>div{
     text-align: center;
     margin: auto;
     font-family: '微軟正黑體',Arial, Helvetica, sans-serif;
