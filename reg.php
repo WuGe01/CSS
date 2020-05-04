@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>會員註冊</title>
+    <link rel="stylesheet" href="/plugins/bootstrap.css">
 </head>
 <body>
     <h1>註冊會員</h1>

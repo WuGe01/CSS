@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入</title>
+    <link rel="stylesheet" href="/plugins/bootstrap.css">
+    <style>
+        table{
+            
+        }
+    </style>
+</head>
+<body>
+    <form action="checkLogin.php" method="post">
+        <table>
+            <tr>
+                <td>帳號:</td>
+                <td><input type="text" name="acc" id="acc"></td>
+            </tr>
+            <tr>
+                <td>密碼:</td>
+                <td><input type="text" name="pw" id="pw"></td>
+            </tr>
+            <tr>
+            <td>
+                <input type="submit" value="送出">
+            </td>
+            <td>
+                <input type="reset" value="重置">
+            </td>
+            </tr>
+        </table></form>
+</body>
+</html>
