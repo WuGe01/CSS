@@ -25,6 +25,7 @@ $res=$pdo->exec($sql);
 if($res == 1){
     echo $res;
     echo "新增成功";
+    header("location:list_user.php");
 }else{
     echo $res;
     echo "新增失敗";

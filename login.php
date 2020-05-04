@@ -8,23 +8,28 @@
     <style>
         table{
             margin: auto;
+            border:1px solid #CCC;
         }
+
     </style>
 </head>
 <body>
     <?php
-    if(isset($_GET['status'])){       
-              switch(($_GET['status'])){
-                case 'fasle':
-                    echo "帳號密碼錯誤";
-                break;
-                case 'true':
-                    header("location:list_user.php?id=". $_GET['id']);
-                break;
 
-            } ;    
+    if(isset($_COOKIE['status'])){       
+        switch(($_COOKIE['status'])){
+        case 'false':
+            echo "帳號密碼錯誤";
+        break;
+        case 'true':
+            header("location:list_user.php");
+        break;
+
+        } ;    
     };
+    
     ?>
+    
     <form action="checkLogin.php" method="post">
         <table>
             <tr>

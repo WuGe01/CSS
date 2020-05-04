@@ -13,22 +13,25 @@ if(!empty($_POST['acc'])){
     // print_r($name);
     // $play=$pdo->query($sql)->fetch();
     // print_r($play);
-    echo $sql;
+ 
     if($play>0){
-        echo "登入成功";
-        header("location:list_user.php?id=$id[0]");
+        echo "<h1><div>登入成功，三秒後自動轉頁</div></h1>";
+        setcookie("id",$id[0],time()+180);
+        setcookie("status",'true',time()+180);
+        header("Refresh:3;url=list_user.php");
     }else{
-        echo "登入失敗";
-        header("location:login.php?status=fasle");
+        echo "登入失敗10後重新嘗試";
+        setcookie("status",'false',time()+10);
+        header("location:login.php");
     }
     // if(!empty($play)){
     //     echo "登入成功";
     // }else{
     //     echo "登入失敗";
     // }
- }else{
-    header("location:login.php?status=fasle");
- };
+     }else{
+         header("location:login.php");
+     };
 
 
 ?>

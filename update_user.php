@@ -25,10 +25,11 @@ $sql="
 $res=$pdo->exec($sql);
 
 if($res){
-    header("location:list_user.php");
+    echo "<h1><div>更新成功</div></h1>";
+    header("Refresh:3;url=list_user.php");
 }else{
-    echo "更新失敗" . "<br>";
-    echo $sql;
+    echo "<h1><div>更新失敗</div></h1>";
+    header("Refresh:3;url=list_user.php");
 }
 
 

@@ -8,21 +8,21 @@
     <link rel="stylesheet" href="pdo.css">
 </head>
 <body>
-    <h1><div>會員列表</div></h1>
+    
     <?php
     include "dbconnect.php";
 
     $sql="select * from `student` order by `id` desc";
     $row=$pdo->query($sql)->fetchAll();
 
-    if(isset($_GET['id'])){
-        $play_id=$_GET['id'];
+    if(isset($_COOKIE['id'])){
+        $play_id=$_COOKIE['id'];
         $sql2="select `name` from `student` where `id` = $play_id";
         $row2=$pdo->query($sql2)->fetch();
-        
+        echo "<h1><div>會員列表</div></h1>";
         echo "<h1><div>" . "歡迎會員" . $row2[0] . "大大</div></h1>";
     }else{
-        echo "非法使用";
+        echo "<h1>非法使用，或連線愈時，請重新登入</h1>";
         exit();
     };
 
@@ -63,14 +63,16 @@
 
     }
 
-    echo "</table>";
 
     ?>
 
+<tr>
 
-<a href="login.php?status=true&id=<?echo $play_id;?>"><button>登出</button></a>
+</tr>
+<a href="logout.php"><button>登出</button></a>
+<a href="reg.php"><button>註冊</button></a>
 
-
+</table>
 
 </body>
 </html>
