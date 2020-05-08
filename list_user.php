@@ -14,9 +14,9 @@
 
     $sql="select * from `student` order by `id` desc";
     $row=$pdo->query($sql)->fetchAll();
-
-    if(isset($_COOKIE['id'])){
-        $play_id=$_COOKIE['id'];
+    session_start()
+    if(isset($_SESSION['status'])){
+        $play_id=$_SESSION['id'];
         $sql2="select `name` from `student` where `id` = $play_id";
         $row2=$pdo->query($sql2)->fetch();
         echo "<h1><div>會員列表</div></h1>";

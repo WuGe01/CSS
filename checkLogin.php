@@ -15,13 +15,18 @@ if(!empty($_POST['acc'])){
     // print_r($play);
  
     if($play>0){
+        session_start();
+        $_SESSION['status']='true';
+        $_SESSION['id']=$id[0];
         echo "<h1><div>登入成功，三秒後自動轉頁</div></h1>";
-        setcookie("id",$id[0],time()+180);
-        setcookie("status",'true',time()+180);
+        // setcookie("id",$id[0],time()+180);
+        // setcookie("status",'true',time()+180);
         header("Refresh:3;url=list_user.php");
     }else{
+        session_start();
+        $_SESSION['status']='false';
         echo "登入失敗10後重新嘗試";
-        setcookie("status",'false',time()+10);
+        // setcookie("status",'false',time()+10);
         header("location:login.php");
     }
     // if(!empty($play)){

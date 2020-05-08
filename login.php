@@ -16,8 +16,8 @@
 <body>
     <?php
 
-    if(isset($_COOKIE['status'])){       
-        switch(($_COOKIE['status'])){
+    if(isset($_SESSION['status'])){       
+        switch(($_SESSION['status'])){
         case 'false':
             echo "帳號密碼錯誤";
         break;
