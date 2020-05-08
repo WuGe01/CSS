@@ -14,7 +14,7 @@
 
     $sql="select * from `student` order by `id` desc";
     $row=$pdo->query($sql)->fetchAll();
-    session_start()
+    session_start();
     if(isset($_SESSION['status'])){
         $play_id=$_SESSION['id'];
         $sql2="select `name` from `student` where `id` = $play_id";
