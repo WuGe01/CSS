@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/plugins/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" ></script>
+    <style>
+        .aaa{
+            width: 75%;
+        }
+        
+        
+
+    </style>
+</head>
+<body class="p-5">
+    <div class="progress">
+        <div class="aaa progress-bar progress-bar-striped progress-bar-animated"   ></div>
+      </div>
+
+
+    <hr>
+    <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="我是誰?" data-content="我是金城武">Click to toggle popover</button>
+
+    <script>
+        $(function () {
+        $('[data-toggle="popover"]').popover({
+            container: 'body'
+        })
+        })
+    </script>
+
+</body>
+</html>

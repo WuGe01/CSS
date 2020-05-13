@@ -12,24 +12,31 @@
 <body class="p-5">
     <ul class="nav nav-tabs">
         <li class="nav-item">
-          <a class="nav-link " href="#">Active</a>
+          <a class="nav-link active"  data-toggle="tab" href="#AA" >AA</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">Link</a>
+          <a class="nav-link"  data-toggle="tab" href="#BB" >BB</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <a class="nav-link" data-toggle="tab" href="#CC" >CC</a>
         </li>
       </ul>
+      <div class="tab-content" >
+        <div class="tab-pane show active" id="AA" role="tabpanel" aria-labelledby="home-tab">AAAAAAAAAAAA</div>
+        <div class="tab-pane" id="BB" role="tabpanel" aria-labelledby="profile-tab">BBBBBBBBBBBB</div>
+        <div class="tab-pane" id="CC" role="tabpanel" aria-labelledby="contact-tab">CCCCCCCCCCCC</div>
+      </div>
       <hr>
-      <nav class="nav nav-pills nav-fill">
-        <a class="nav-link nav-item" href="#">Active</a>
-        <a class="nav-link nav-item" href="#">Link</a>
-        <a class="nav-link nav-item active" href="#">Link</a>
-        <a class="nav-link nav-item disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+
+      <nav class="nav nav-tabs">
+          <a class="nav-item nav-link active" data-toggle="tab" href="#nav-DD" role="tab" >DD</a>
+          <a class="nav-item nav-link"  data-toggle="tab" href="#nav-EE" role="tab" >EE</a>
+          <a class="nav-item nav-link" data-toggle="tab" href="#nav-FF" role="tab" >FF</a>
       </nav>
+      <div class="tab-content">
+        <div class="tab-pane  show active" id="nav-DD" >DDD</div>
+        <div class="tab-pane " id="nav-EE" >EEE</div>
+        <div class="tab-pane " id="nav-FF" >FFF</div>
+      </div>
 </body>
 </html>
