@@ -51,7 +51,7 @@ function all($table,...$v){
             $tmp[]=sprintf("`%s` = '%s'",$key,$value);
             // $sql = $sql . "where" . "`" . $key . "`=" . "'" . $value . "'";
         }
-        $sql = $sql . " where " . implode(" && ", $tmp);
+        $sql = $sql . " where " . join(" && ", $tmp);
     }
     if(isset($v[1])){
 
