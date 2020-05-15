@@ -22,7 +22,7 @@ function insert($table,$arg){
     global $pdo;
     // $tp=[];
     // $tv=[];
-    $sql="insert into ";
+    // $sql="insert into ";
 
     // array_keys($arg);
 
@@ -35,7 +35,7 @@ function insert($table,$arg){
     // $s2="('" . join("','",$arg) . "')";
     // echo $s1;
     // echo $s2;
-    $sql=$sql . $table . "(`" . join("`,`",array_keys($arg)) . "`)" . " values " . "('" . join("','",$arg) . "')";
+    $sql="insert into " . $table . "(`" . join("`,`",array_keys($arg)) . "`)" . " values " . "('" . join("','",$arg) . "')";
     // echo $sql;
     // $pdo->exce($sql);
     return $pdo->exec($sql);
